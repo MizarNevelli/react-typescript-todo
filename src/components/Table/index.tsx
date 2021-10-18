@@ -6,31 +6,35 @@ import falseIcon from '../../assets/false-icon.png';
 import { useContext } from 'react';
 import { TodosContext } from '../../context/TodosContext';
 
-const MyTable : React.FC = () => {
+const MyTable: React.FC = () => {
 
     const { data } = useContext(TodosContext)
-    // console.log('myItems from table', data)
 
     const columns: GridColDef[] = [
         {
             field: 'userId',
             headerName: 'USER ID',
-            width: 200,
+            minWidth: 150,
+            flex: 0.2,
             filterable: false,
         },
         {
             field: 'title',
             headerName: 'TITLE',
-            width: 200
+            minWidth: 200,
+            flex: 0.4,
+            filterable: false,
         },
         {
             field: 'completed',
             headerName: 'COMPLETED',
             headerAlign: 'right',
-            width: 200,
+            minWidth: 200,
+            flex: 0.4,
+            filterable: false,
             renderCell: (cellValue) => {
                 return (
-                    <div style={{ width:'100%', textAlign: 'right' }}>
+                    <div style={{ width: '100%', textAlign: 'right', marginRight: '2%' }}>
                         {cellValue.value ?
                             <img style={{ width: '15px' }} src={trueIcon} /> :
                             <img style={{ width: '15px' }} src={falseIcon} />
@@ -44,12 +48,14 @@ const MyTable : React.FC = () => {
     return (
         <>
             <div style={{ height: 400, width: '100%' }} className='table-section'>
-                <DataGrid
-                    rows={data || []}
-                    columns={columns}
-                    pageSize={5}
-                    rowsPerPageOptions={[5]}
-                />
+                <div style={{ display: 'flex', height: '100%' }}>
+                    <DataGrid
+                        rows={data || []}
+                        columns={columns}
+                        pageSize={5}
+                        rowsPerPageOptions={[5]}
+                    />
+                </div>
             </div>
         </>
     );

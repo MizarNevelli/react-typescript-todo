@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { TodosContext } from '../../context/TodosContext';
 import { Todo } from '../../models/todos';
-// import TextField from '@mui/material/TextField';
 import searchIcon from '../../assets/search-icon.png';
 import Switch from '@mui/material/Switch';
 import FormGroup from '@mui/material/FormGroup';
@@ -68,7 +67,7 @@ const FiltersContainer: React.FC = () => {
     return (
         <>
             <div className='filters-section'>
-                <h1 className='filters-title'>FILTERS</h1>
+                <h1 className='filters-title blue-title'>FILTERS</h1>
                 <div className='title-filter-container'>
                     <div className='search-icon-wrap'>
                         <img src={searchIcon} alt='search-icon' />
@@ -76,7 +75,6 @@ const FiltersContainer: React.FC = () => {
                     <input
                         type="text"
                         placeholder="Search..."
-                        // size="small"
                         onChange={(e) => setTitleFilter(e.target.value)}
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') {
@@ -85,17 +83,17 @@ const FiltersContainer: React.FC = () => {
                         }}
                     />
                 </div>
-                <div>
-                    <h2>COMPLETED</h2>
+                <div className='completed-filter'>
+                    <h3 className='blue-title'>COMPLETED</h3>
                     <FormGroup>
                         <FormControlLabel
                             control={<Switch onChange={(e) => setCompletedFilter(e.target.checked)} />}
-                            label="Label"
+                            label={completedFilter ? 'Si' : 'No'}
                         />
                     </FormGroup>
                 </div>
                 <div>
-                    <h2>SELECT USER ID</h2>
+                    <h3 className='blue-title'>SELECT USER ID</h3>
                     <Select 
                         size='small'
                         value={userIdFilter}
