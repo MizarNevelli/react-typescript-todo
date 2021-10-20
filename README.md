@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Env
+## Requirements
 
-- Node version: 12
+- Node version >= 12
 ## Run locally:
 
 - Clone the repo: 
