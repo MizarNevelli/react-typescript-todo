@@ -74,6 +74,14 @@
       .MuiDataGrid-root {
         border: none !important;
         background-color: #F4F4F4 !important;
+        .MuiDataGrid-row {
+          margin: 10px 0;
+          background-color: white;
+
+        }
+        .MuiDataGrid-cell {
+          border-bottom: 1px solid #00A0DF !important;
+        }
         .MuiDataGrid-footerContainer {
           justify-content: center;
           .css-jtlhu6-MuiTablePagination-root {
@@ -87,7 +95,7 @@
       .MuiDataGrid-main {
         margin: 15px;
         width: auto !important;
-        background-color: white;
+        // background-color: white;
         .MuiDataGrid-columnsContainer {
           background-color: #F4F4F4 !important;
           color: #003479;
