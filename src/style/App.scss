@@ -19,13 +19,14 @@
     flex-direction: row;
     justify-content: space-around;
     margin: 3%;
+    margin-top: 10vh;
 
 
     .filters-section {
       width: 25%;
       margin-right: 2%;
       background-color: #F4F4F4 !important;
-      padding: 2vw;
+      padding: 0 2vw;
       border-radius: 4px;
 
       .filters-title {
@@ -69,20 +70,33 @@
 
     .table-section {
       width: 70%;
+      // Overrides Material UI Datagrid style
       .MuiDataGrid-root {
         border: none !important;
         background-color: #F4F4F4 !important;
+        .MuiDataGrid-footerContainer {
+          justify-content: center;
+          .css-jtlhu6-MuiTablePagination-root {
+            color: #003479;
+          }
+        }
       }
       .MuiDataGrid-columnSeparator {
         display: none !important;
       }
-      .MuiDataGrid-renderingZone {
+      .MuiDataGrid-main {
         margin: 15px;
         width: auto !important;
         background-color: white;
+        .MuiDataGrid-columnsContainer {
+          background-color: #F4F4F4 !important;
+          color: #003479;
+        }
       }
     }
   }
+
+  // Mobile
 
   $breakpoint-tablet: 768px;
 
@@ -90,6 +104,7 @@
     .container {
       flex-direction: column;
       align-items: center;
+      margin-top: 0;
 
       .filters-section{
         width: 100%;

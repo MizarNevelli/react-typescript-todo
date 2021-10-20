@@ -1,10 +1,10 @@
 
-import { Todo } from '../../models/todos';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import trueIcon from '../../assets/true-icon.png';
 import falseIcon from '../../assets/false-icon.png';
 import { useContext } from 'react';
 import { TodosContext } from '../../context/TodosContext';
+
 
 const MyTable: React.FC = () => {
 
@@ -44,6 +44,8 @@ const MyTable: React.FC = () => {
             }
         }
     ];
+
+
 
     return (
         <>
