@@ -1,6 +1,10 @@
 # Getting Started 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Env
+
+- Node version: 12
 ## Run locally:
 
 - Clone the repo: 
