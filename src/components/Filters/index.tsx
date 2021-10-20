@@ -64,6 +64,11 @@ const FiltersContainer: React.FC = () => {
         setUserIdFilter(event.target.value);
     }
 
+    const resetFilters = async () => {
+        const allTodos = await fetchTodos();
+        setData(allTodos)
+    }
+
     return (
         <>
             <div className='filters-section'>
@@ -107,6 +112,14 @@ const FiltersContainer: React.FC = () => {
                             </MenuItem>
                         ))}
                     </Select>
+                </div>
+                <div>
+                    <p 
+                        className='reset-filters'
+                        onClick={resetFilters}
+                    >
+                        Reset filters
+                    </p>
                 </div>
 
             </div>

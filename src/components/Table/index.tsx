@@ -34,7 +34,7 @@ const MyTable: React.FC = () => {
             filterable: false,
             renderCell: (cellValue) => {
                 return (
-                    <div style={{ width: '100%', textAlign: 'right', marginRight: '2%' }}>
+                    <div style={{ width: '100%', textAlign: 'right', marginRight: '30px' }}>
                         {cellValue.value ?
                             <img style={{ width: '15px' }} src={trueIcon} /> :
                             <img style={{ width: '15px' }} src={falseIcon} />

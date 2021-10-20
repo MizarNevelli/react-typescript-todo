@@ -55,7 +55,16 @@
       .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root{
         color: #003479;
       }
-      
+      .reset-filters {
+        color: #003479;
+        text-decoration: underline;
+        text-align: center;
+        margin-top: 50px;
+        &:hover {
+          cursor: pointer;
+        }
+
+      }
     }
 
     .table-section {
@@ -66,6 +75,11 @@
       }
       .MuiDataGrid-columnSeparator {
         display: none !important;
+      }
+      .MuiDataGrid-renderingZone {
+        margin: 15px;
+        width: auto !important;
+        background-color: white;
       }
     }
   }
@@ -83,7 +97,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 5% 0;
+        margin: 5% 15%;
       }
       .table-section {
         width: 100%;
